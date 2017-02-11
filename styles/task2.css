@@ -1,0 +1,11 @@
+#task2 .container-div {
+    text-align: center;
+    letter-spacing: 5px;
+    padding-top: 90px;
+    overflow: auto;
+    max-height: calc(100% - 100px);
+}
+
+.pyramid-box {
+    display: inline-block
+}
