@@ -1,0 +1,36 @@
+* {
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
+
+#body-wrapper {
+    background: #fafafa;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+#container-div {
+    box-shadow: 0 0 50px #eaeaea;
+}
+
+.recursive-box {
+    background: rgba(0,0,0,.1);
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50%;
+    width: 80%;
+    height: 80%;
+
+    margin: 0 auto;
+    text-align: center;
+
+    transform: translateY(-50%);
+}
