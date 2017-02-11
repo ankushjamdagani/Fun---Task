@@ -1,16 +1,16 @@
 
 .will-go-text {
+    color: #333;
+    font-size: 2em;
+    font-variant: small-caps;
+    padding: 2em;
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
     text-align: center;
-    text-shadow: 0.05em 0.05em 0.2em #696969, -0.05em -0.05em 0.2em #ffffff;
-    font-size: 3em;
-    font-variant: small-caps;
-    font-weight: 600;
-    color: #333;
     transform: translateY(-50%);
+    text-shadow: 0.03em 0.03em 0.1em #696969, -0.05em -0.05em 0.1em #ffffff;
 }
 
 .recursive-box {
@@ -18,16 +18,16 @@
     background: rgba(0,0,0,.1);
     box-shadow: 0 0 50px #eaeaea;
     cursor: pointer;
+    height: 80%;
+    width: 80%;
+
     position: absolute;
     right: 0;
     left: 0;
     top: 50%;
-    width: 80%;
-    height: 80%;
-
     margin: 0 auto;
     text-align: center;
-
+    
     /*transform: translateY(-50%);*/
 }
 

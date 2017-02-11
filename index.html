@@ -2,13 +2,35 @@
     <head>
         <title>Recursive Box UI</title>
         <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/task1.css">
         <link rel="stylesheet" href="styles/task2.css">
         <link rel="stylesheet" href="styles/task3B.css">
         <script src="scripts/jquery-3.1.1.min.js" ></script>
         <script src="scripts/task.js" ></script>
     </head>
     <body>
-        <div id="task2" class="body-wrapper">
+        <nav id="controls">
+            <a href="#task1">Task 1</a>
+            <a href="#task2">Task 2</a>
+            <a href="#task3B">Task 3B</a>
+        </nav>
+        <article id="task1" class="body-wrapper">
+            <div class="msg-bar clearfix">
+                <span>
+                    Enter any string into input box, if that string have a*r in the middle then it validates otherwise error.
+                </span>
+            </div>
+            <div class="container-div">
+                <div class="input-box">
+                    <input type="text" placeholder="Enter text to validate..">
+                    <button>Validate</button>
+                    <span class="error-tooltip">This input doesn't match with the format [a*r in the middle of word]</span>
+                    <span class="icons go">!</span>
+                    <span class="icons stop">X</span>
+                </div>
+            </div>
+        </article>
+        <article id="task2" class="body-wrapper">
             <div class="msg-bar clearfix">
                 <span>
                     Enter the height of pyramid to be created (in integer ofcourse)
@@ -21,8 +43,8 @@
             <div class="container-div">
                 <div class="pyramid-box"></div>
             </div>
-        </div>
-        <div id="task3B" class="body-wrapper">
+        </article>
+        <article id="task3B" class="body-wrapper">
             <div class="msg-bar clearfix">
                 <span>
                     Click anywhre on box to create its child which is it's 80% in length and breadth.
@@ -34,6 +56,6 @@
                     <p class="will-go-text">Click Anywhere On This Space</p>
                 </div>
             </div>
-        </div>
+        </article>
     </body>
 </html>

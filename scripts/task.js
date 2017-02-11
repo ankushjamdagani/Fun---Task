@@ -1,6 +1,57 @@
 $(document).ready(function () {
 
 
+    var goValidate = (function () {
+        return {
+            onInput : function () {
+                $('.input-box button').on('click', function () {
+                    var inputVal = $(this).siblings('input').val().trim();
+                    console.log(inputVal);
+
+                    if(!goValidate.validate(inputVal)) {
+                        // $('.error-tooltip').show();
+                        $('.input-box').addClass('error');
+                    }
+                    else {
+                        $('.input-box').addClass('no-error');
+                    }
+                });
+            },
+
+            onChange : function () {
+                $('.input-box input').on('keydown', function () {
+                    $('.input-box').removeClass('error no-error');
+                });
+            },
+
+            validate : function (testStr) {
+                var length = testStr.length;
+
+                // In case even numbers are to be rejedcted
+                if(length % 2 === 0 || length < 3)
+
+                // Here we are not rejecting even numbers
+                if(length < 3)
+                    return false;
+
+                length = Math.floor(length / 2);
+
+                var a = testStr.charCodeAt(length - 1),
+                    x = testStr.charCodeAt(length),
+                    r = testStr.charCodeAt(length + 1);
+
+                if((a === 97 || a === 65) && ((x >= 48 && x <= 57) || (x >= 65 && x <= 97) || (x >= 65 && x <= 122)) && (r === 114 || r === 82)) {
+                    return true;
+                }
+
+                return false;
+            }
+        };
+    })();
+
+    goValidate.onInput();
+    goValidate.onChange();
+
     // TASK 2 - MAKE PYRAMID BASED ON INPUT (PYRAMID WIDTH = PREV_COUNTER + CURRENT_COUNTER; PYRAMID HEIGHT = CURRENT_COUNTER)
     var goPyramid = (function () {
         return {

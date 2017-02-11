@@ -6,6 +6,11 @@
     font-family: sans-serif;
 }
 
+::selection {
+    background: #ff5a5f;
+    color: white;
+}
+
 body {
     height: 100%;
 }
@@ -19,10 +24,40 @@ body {
     visibility: collapse;
 }
 
+#controls {
+    font-size: 12px;
+    position: fixed;
+    bottom: 1em;
+    right: 0;
+    text-align: right;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    border-bottom: solid 10px #903bc1;
+}
+
+#controls a {
+    background: #903bc1;
+    color: white;
+    display: inline-block;
+    padding: .5em 1.5em;
+    text-decoration: none;
+    transition: all .5s;
+    border-radius: 2px 2px 0 0;
+}
+
+#controls a:hover {
+    background: #d62a30;
+    transform: translateY(-5px);
+}
+
+#controls a.active {
+    background: #a90409;
+}
+
 button {
     background: #00d847;
     border-radius: 2px;
-    box-shadow: 0 0 10px #989898;
     color: white;
     padding: .25em 1em;
     /* position: absolute; */
@@ -33,14 +68,6 @@ button {
 
 button:hover {
     background: #1ab722; 
-}
-
-input {
-    box-sizing: border-box;
-    outline: 0;
-    border: 0;
-    line-height: 2em;
-    padding: .25em 0 .25em 1em;
 }
 
 .body-wrapper {
@@ -58,25 +85,32 @@ input {
 }
 
 .msg-bar {
-    color: white;
-    background: #8900d8;
-    background: #484848;
-    /*position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 5;*/
+    color: #903bc1;
+    border-top: solid 10px #903bc1;
     margin: 0 auto;
-    text-align: center;
     padding: 0.5em 1em;
+    border-bottom: dashed 1px #8900d8;
+    font-style: italic;
+    letter-spacing: .5px;
+    font-size: smaller;
 }
 
 span {
     float: left;
-    padding: 1em;
+    padding: .5em;
 }
 
 div.controls {
     float: right;
-    padding: 1em 0 .2em;
+}
+
+
+@media screen and (min-width: 601px) {
+    #controls {
+        font-size: 15px;
+    }
+
+    #controls a {
+        padding: .5em 2em;
+    }
 }

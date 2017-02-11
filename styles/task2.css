@@ -6,6 +6,15 @@
     max-height: calc(100% - 100px);
 }
 
+#task2 input {
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    line-height: 2em;
+    padding: .25em 0 .25em 1em;
+    border: solid 1px #dce0e0;
+}
+
 .pyramid-box {
     display: inline-block
 }

@@ -1,0 +1,122 @@
+.input-box {
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    text-align: right;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+.input-box input {
+    background: #fafafa;
+    box-shadow: inset 0 0 10px #ccc;
+    color: #666;
+    font-size: 1em;
+    letter-spacing: 3px;
+    line-height: 50px;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+.input-box input:focus {
+    background: #fff;
+}
+
+.input-box button {
+    box-shadow: 3px 3px 6px #ccc, -2px -2px 6px #fff;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+
+.input-box button:active {
+    box-shadow: 0px 0px 6px #ccc;
+}
+
+
+.error-tooltip {
+    animation: swoop-in .25s linear forwards;
+    background: #484848;
+    color: white;
+    font-size: .8em;
+    padding: 1em;
+    position: absolute;
+    right: 2em;
+    top: -1.25em;
+    display: none;
+}
+
+.error-tooltip:after {
+    box-shadow: inset 0 0 10px #333;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -.96em;
+    right: 0em;
+    border: solid .5em transparent;
+    border-top-color: #333;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+
+span.icons {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    text-align: center;
+    padding: 0.6em 0.8em 1em;
+    box-shadow: 0 0 10px #ccc;
+    display: none;
+}
+
+span.icons.stop {
+    background: #ff5a51;
+}
+
+span.icons.go {
+    background: #00d847;
+}
+
+.input-box.error span.icons.stop {
+    display: block;
+}
+
+.input-box.no-error span.icons.go {
+    display: block;
+}
+
+
+.input-box.no-error input {
+    border-bottom: solid 1px #00ff00;
+}
+.input-box.error input {
+    border-bottom: solid 1px #ff0000;
+}
+
+.input-box.error .error-tooltip {
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+
+    .error-tooltip {
+        font-size: 1em;
+    }
+
+    .input-box input {
+        font-size: 2em;
+    }
+
+    span.icons {
+        padding: 1em 1.1em 1.2em;
+    }
+}
