@@ -48,21 +48,22 @@ $(document).ready(function () {
             // For auto triggering the click on the BOX taking the left corner as point of click 
             // if boxes are stacked to the top left corner.
             
-            // triggerClick : function () {
-            //     $('button').on('click', function () {
-            //         if(goInfinite){
-            //             interval = setInterval(function () {
-            //                 document.elementFromPoint(0, 0).click();
-            //             }, 500);
-            //         }
-            //         else {
-            //             clearInterval(interval);
-            //         }
-            //     });
-            // }
+            triggerClick : function () {
+                $('button').on('click', function () {
+                    if(goInfinite){
+                        interval = setInterval(function () {
+                            document.elementFromPoint(0, 0).click();
+                        }, 500);
+                        $(this).prop('disabled', true);
+                    }
+                    else {
+                        clearInterval(interval);
+                    }
+                });
+            }
         }
     })();
 
     goClicky.getClick();
-    // goClicky.triggerClick();
+    goClicky.triggerClick();
 });

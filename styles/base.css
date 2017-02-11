@@ -14,14 +14,19 @@ button {
     border-radius: 2px;
     box-shadow: 0 0 10px #989898;
     color: white;
+    cursor: pointer;
     padding: 1em;
     position: fixed;
     right: 1em;
-    bottom: 1em;
+    top: 1em;
 }
 
 button:hover {
     background: #1ab722; 
+}
+
+button:disabled {
+    background: #999;
 }
 
 #body-wrapper {
@@ -35,7 +40,7 @@ button:hover {
     text-align: center;
     padding: 0.5em 1em;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     color: white;
     z-index: 5;
@@ -74,14 +79,15 @@ p:hover {
     box-shadow: 0 0 50px #eaeaea;
     cursor: pointer;
     position: absolute;
-    right: 0;
+    /*right: 0;*/
     left: 0;
-    top: 50%;
+    top: 0%;
     width: 80%;
     height: 80%;
 
     margin: 0 auto;
     text-align: center;
+    transform-origin: top left;
 
     /*transform: translateY(-50%);*/
 }
@@ -89,10 +95,10 @@ p:hover {
 @keyframes swoop-in {
     0% {
         opacity: 0;
-        transform: translateY(-50%) scale(.4);
+        transform: scale(.4);
     }
     100% {
         opacity: 1;
-        transform: translateY(-50%) scale(1);
+        transform: scale(1);
     }
 }
