@@ -2,16 +2,38 @@
     <head>
         <title>Recursive Box UI</title>
         <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/task2.css">
+        <link rel="stylesheet" href="styles/task3B.css">
         <script src="scripts/jquery-3.1.1.min.js" ></script>
-        <script src="scripts/base.js" ></script>
+        <script src="scripts/task.js" ></script>
     </head>
     <body>
-        <div id="body-wrapper">
-            <div id="container-div" class="recursive-box">
-                <p>Click Anywhere On Screen</p>
+        <div id="task2" class="body-wrapper">
+            <div class="msg-bar clearfix">
+                <span>
+                    Enter the height of pyramid to be created (in integer ofcourse)
+                </span>
+                <div class="controls">
+                    <input type="number">
+                    <button>Go Pyramid</button>
+                </div>
+            </div>
+            <div class="container-div">
+                <div class="pyramid-box"></div>
             </div>
         </div>
-        <!--<button>Triger Auto Click</button>-->
-        <div id="msg-bar">Click anywhre on box to create its child which is it's' 80% in length and breadth.</div>
+        <div id="task3B" class="body-wrapper">
+            <div class="msg-bar clearfix">
+                <span>
+                    Click anywhre on box to create its child which is it's 80% in length and breadth.
+                </span>
+                <!--<button>Triger Auto Click</button>-->
+            </div>
+            <div class="container-div">
+                <div class="recursive-box">
+                    <p class="will-go-text">Click Anywhere On This Space</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

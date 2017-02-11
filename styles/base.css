@@ -3,10 +3,20 @@
     outline: 0;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body {
     height: 100%;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+    visibility: collapse;
 }
 
 button {
@@ -14,85 +24,59 @@ button {
     border-radius: 2px;
     box-shadow: 0 0 10px #989898;
     color: white;
-    padding: 1em;
-    position: fixed;
-    right: 1em;
-    bottom: 1em;
+    padding: .25em 1em;
+    /* position: absolute; */
+    /* right: 1em; */
+    /* bottom: 1em; */
+    line-height: 2em;
 }
 
 button:hover {
     background: #1ab722; 
 }
 
-#body-wrapper {
+input {
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    line-height: 2em;
+    padding: .25em 0 .25em 1em;
+}
+
+.body-wrapper {
     background: #fafafa;
-    height: 100%;
+    min-height: 100%;
     position: relative;
     width: 100%;
 }
 
-#msg-bar {
-    text-align: center;
-    padding: 0.5em 1em;
-    position: fixed;
+.container-div {
+    background: #fafafa;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.msg-bar {
+    color: white;
+    background: #8900d8;
+    background: #484848;
+    /*position: absolute;
     top: 0;
     left: 0;
-    color: white;
-    z-index: 5;
-    background: #00d847;
-    margin: 0 auto;
     right: 0;
-    /*max-width: 80%;*/
-}
-
-p {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    text-shadow: 0.05em 0.05em 0.2em #696969, -0.05em -0.05em 0.2em #ffffff;
-    font-size: 3em;
-    font-variant: small-caps;
-    font-weight: 600;
-    color: #333;
-    transform: translateY(-50%);
-}
-
-p:hover {
-    
-}
-
-#container-div {
-    width: 100%;
-    height: 100%;
-}
-
-.recursive-box {
-    animation: swoop-in .25s linear forwards;
-    background: rgba(0,0,0,.1);
-    box-shadow: 0 0 50px #eaeaea;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 50%;
-    width: 80%;
-    height: 80%;
-
+    z-index: 5;*/
     margin: 0 auto;
     text-align: center;
-
-    /*transform: translateY(-50%);*/
+    padding: 0.5em 1em;
 }
 
-@keyframes swoop-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-50%) scale(.4);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(-50%) scale(1);
-    }
+span {
+    float: left;
+    padding: 1em;
+}
+
+div.controls {
+    float: right;
+    padding: 1em 0 .2em;
 }
